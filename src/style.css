@@ -8,6 +8,7 @@
     --purple: #5f27cd;
     --white: #eee;
     --light-gray: #ccc;
+    --dark-gray: #bbb;
 }
 
 html {
@@ -81,7 +82,7 @@ ul {
 
 .item:hover,
 .active {
-    background-color: #bbb;
+    background-color: var(--dark-gray);
     border-radius: 4px;
 }
 
@@ -103,6 +104,35 @@ ul {
 .bottom-list .add-project {
     font-size: 18px;
     font-weight: bold;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+}
+
+.right .project-container {
+    width: 50%;
+    margin-top: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.add-task {
+    padding: 5px;
+    cursor: pointer;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+}
+
+.add-task:hover {
+    background-color: var(--dark-gray);
+}
+
+.right .project-container h2 {
+    font-size: 36px;
 }
 
 .footer {
