@@ -23,6 +23,10 @@ body {
     background-color: var(--white);
 }
 
+ul {
+    list-style: none;
+}
+
 .header,
 .footer {
     background-color: var(--purple);
@@ -61,6 +65,44 @@ body {
 
 .main .container .left {
     background-color: var(--light-gray);
+}
+
+.top-list,
+.bottom-list {
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.item:hover,
+.active {
+    background-color: #bbb;
+    border-radius: 4px;
+}
+
+.top-list ul li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.bottom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bottom-list h3 {
+    font-size: 26px;
+}
+
+.bottom-list .add-project {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .footer {
