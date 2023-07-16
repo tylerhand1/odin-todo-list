@@ -126,7 +126,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _js_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/footer */ \"./src/js/footer.js\");\n\n\n\n(0,_js_footer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://odin-todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _js_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/footer */ \"./src/js/footer.js\");\n/* harmony import */ var _js_inbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/inbox */ \"./src/js/inbox.js\");\n/* harmony import */ var _js_today__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/today */ \"./src/js/today.js\");\n/* harmony import */ var _js_this_week__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/this-week */ \"./src/js/this-week.js\");\n\n\n\n\n\n\nfunction loadFirstTime() {\n    (0,_js_footer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n    setSidebarEventListeners();\n}\n\nfunction setSidebarEventListeners() {\n    const listItems = document.querySelectorAll('.list-item');\n    const addProjectDiv = document.querySelector('#add-project');\n\n    listItems.forEach(listItem => listItem.addEventListener('click', e => changeContent(e)));\n    addProjectDiv.addEventListener('click', e => addProject(e));\n}\n\nfunction clearProjectContainer() {\n    const projectContainer = document.querySelector('#project-container');\n\n    while(projectContainer.firstChild) {\n        projectContainer.removeChild(projectContainer.lastChild);\n    }\n}\n\nfunction changeContent(e) {\n    clearProjectContainer();\n\n    switch(Number.parseInt(e.target.dataset.key)) {\n        case 0:\n            (0,_js_inbox__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n            break;\n        case 1:\n            (0,_js_today__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n            break;\n        case 2:\n            (0,_js_this_week__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n    }\n}\n\nfunction addProject(e) {\n    console.log(e.target);\n}\n\nloadFirstTime();\n\n//# sourceURL=webpack://odin-todo-list/./src/index.js?");
 
 /***/ }),
 
@@ -137,6 +137,36 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ setFooter)\n/* harmony export */ });\nfunction setFooter() {\n    const footerText = document.querySelector('#footer-text');\n\n    footerText.textContent = `Copyright © ${(new Date()).getFullYear()} tylerhand1`;\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/js/footer.js?");
+
+/***/ }),
+
+/***/ "./src/js/inbox.js":
+/*!*************************!*\
+  !*** ./src/js/inbox.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadInbox)\n/* harmony export */ });\nfunction loadInbox() {\n    const projectContainer = document.querySelector('#project-container');\n\n    const header2 = document.createElement('h2');\n    header2.classList.add('project-name');\n    header2.textContent = `Inbox`;\n\n    const addTaskDiv = document.createElement('div');\n    addTaskDiv.classList.add('add-task');\n    addTaskDiv.id = `add-task`;\n    addTaskDiv.textContent = `+ Add Project`;\n\n    projectContainer.appendChild(header2);\n    projectContainer.appendChild(addTaskDiv);\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/js/inbox.js?");
+
+/***/ }),
+
+/***/ "./src/js/this-week.js":
+/*!*****************************!*\
+  !*** ./src/js/this-week.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadThisWeek)\n/* harmony export */ });\nfunction loadThisWeek() {\n    \n}\n\n//# sourceURL=webpack://odin-todo-list/./src/js/this-week.js?");
+
+/***/ }),
+
+/***/ "./src/js/today.js":
+/*!*************************!*\
+  !*** ./src/js/today.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadToday)\n/* harmony export */ });\nfunction loadToday() {\n    \n}\n\n//# sourceURL=webpack://odin-todo-list/./src/js/today.js?");
 
 /***/ }),
 
